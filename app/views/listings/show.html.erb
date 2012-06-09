@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Address:</b>
+  <%= @listing.address %>
+</p>
+
+<p>
+  <b>Bed:</b>
+  <%= @listing.bed %>
+</p>
+
+<p>
+  <b>Bath:</b>
+  <%= @listing.bath %>
+</p>
+
+<p>
+  <b>Landlord:</b>
+  <%= @listing.landlord_id %>
+</p>
+
+<p>
+  <b>Rent:</b>
+  <%= @listing.rent %>
+</p>
+
+<p>
+  <b>Sec dep:</b>
+  <%= @listing.sec_dep %>
+</p>
+
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>

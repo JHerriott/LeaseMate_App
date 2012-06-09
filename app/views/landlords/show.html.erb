@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fname:</b>
+  <%= @landlord.fname %>
+</p>
+
+<p>
+  <b>Lname:</b>
+  <%= @landlord.lname %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @landlord.email %>
+</p>
+
+<p>
+  <b>Password digest:</b>
+  <%= @landlord.password_digest %>
+</p>
+
+
+<%= link_to 'Edit', edit_landlord_path(@landlord) %> |
+<%= link_to 'Back', landlords_path %>

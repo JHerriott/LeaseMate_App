@@ -1,0 +1,61 @@
+<%= form_for(@app) do |f| %>
+  <% if @app.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@app.errors.count, "error") %> prohibited this app from being saved:</h2>
+
+      <ul>
+      <% @app.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fname %><br />
+    <%= f.text_field :fname %>
+  </div>
+  <div class="field">
+    <%= f.label :lname %><br />
+    <%= f.text_field :lname %>
+  </div>
+  <div class="field">
+    <%= f.label :dob %><br />
+    <%= f.text_field :dob %>
+  </div>
+  <div class="field">
+    <%= f.label :ssn %><br />
+    <%= f.text_field :ssn %>
+  </div>
+  <div class="field">
+    <%= f.label :d_lic_no %><br />
+    <%= f.text_field :d_lic_no %>
+  </div>
+  <div class="field">
+    <%= f.label :d_lic_state %><br />
+    <%= f.text_field :d_lic_state %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :pets %><br />
+    <%= f.check_box :pets %>
+  </div>
+  <div class="field">
+    <%= f.label :present_add %><br />
+    <%= f.text_field :present_add %>
+  </div>
+  <div class="field">
+    <%= f.label :listing_id %><br />
+    <%= f.number_field :listing_id %>
+  </div>
+  <div class="field">
+    <%= f.label :renter_id %><br />
+    <%= f.number_field :renter_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

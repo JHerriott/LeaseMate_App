@@ -1,0 +1,43 @@
+<h1>Listing apps</h1>
+
+<table>
+  <tr>
+    <th>Fname</th>
+    <th>Lname</th>
+    <th>Dob</th>
+    <th>Ssn</th>
+    <th>D lic no</th>
+    <th>D lic state</th>
+    <th>Phone</th>
+    <th>Pets</th>
+    <th>Present add</th>
+    <th>Listing</th>
+    <th>Renter</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apps.each do |app| %>
+  <tr>
+    <td><%= app.fname %></td>
+    <td><%= app.lname %></td>
+    <td><%= app.dob %></td>
+    <td><%= app.ssn %></td>
+    <td><%= app.d_lic_no %></td>
+    <td><%= app.d_lic_state %></td>
+    <td><%= app.phone %></td>
+    <td><%= app.pets %></td>
+    <td><%= app.present_add %></td>
+    <td><%= app.listing_id %></td>
+    <td><%= app.renter_id %></td>
+    <td><%= link_to 'Show', app %></td>
+    <td><%= link_to 'Edit', edit_app_path(app) %></td>
+    <td><%= link_to 'Destroy', app, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New App', new_app_path %>

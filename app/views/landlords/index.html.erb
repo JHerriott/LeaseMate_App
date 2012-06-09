@@ -1,0 +1,29 @@
+<h1>Listing landlords</h1>
+
+<table>
+  <tr>
+    <th>Fname</th>
+    <th>Lname</th>
+    <th>Email</th>
+    <th>Password digest</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @landlords.each do |landlord| %>
+  <tr>
+    <td><%= landlord.fname %></td>
+    <td><%= landlord.lname %></td>
+    <td><%= landlord.email %></td>
+    <td><%= landlord.password_digest %></td>
+    <td><%= link_to 'Show', landlord %></td>
+    <td><%= link_to 'Edit', edit_landlord_path(landlord) %></td>
+    <td><%= link_to 'Destroy', landlord, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Landlord', new_landlord_path %>
