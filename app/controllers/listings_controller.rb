@@ -24,7 +24,7 @@ class ListingsController < ApplicationController
   # GET /listings/new
   # GET /listings/new.json
   def new
-    @landlord = Landlord.find(params[:uid])
+    @landlord = Landlord.find_by_id(session[:uid])
     @listing = @landlord.listings.build
 
     respond_to do |format|
