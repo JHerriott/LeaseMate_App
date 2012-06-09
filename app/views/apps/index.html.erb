@@ -2,17 +2,13 @@
 
 <table>
   <tr>
-    <th>Fname</th>
-    <th>Lname</th>
+    <th>Name</th>
     <th>Dob</th>
-    <th>Ssn</th>
-    <th>D lic no</th>
-    <th>D lic state</th>
+    <th>SSN</th>
+    <th>Driver's License #</th>
     <th>Phone</th>
     <th>Pets</th>
-    <th>Present add</th>
-    <th>Listing</th>
-    <th>Renter</th>
+    <th>Present Address</th>
     <th></th>
     <th></th>
     <th></th>
@@ -20,12 +16,10 @@
 
 <% @apps.each do |app| %>
   <tr>
-    <td><%= app.fname %></td>
-    <td><%= app.lname %></td>
+    <td><%= app.fname %> <%= app.lname %></td>
     <td><%= app.dob %></td>
     <td><%= app.ssn %></td>
-    <td><%= app.d_lic_no %></td>
-    <td><%= app.d_lic_state %></td>
+    <td><%= app.d_lic_no %>, <%= app.d_lic_state %></td>
     <td><%= app.phone %></td>
     <td><%= app.pets %></td>
     <td><%= app.present_add %></td>

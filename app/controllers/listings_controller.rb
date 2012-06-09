@@ -2,8 +2,7 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    # @listings = Listing.find_all_by_landlord_id(params[:id])
-    @listings = Listing.all
+    @listings = Listing.find_all_by_landlord_id(session[:uid])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +24,8 @@ class ListingsController < ApplicationController
   # GET /listings/new
   # GET /listings/new.json
   def new
-    @listing = Listing.new
+    @landlord = Landlord.find(params[:uid])
+    @listing = @landlord.listings.build
 
     respond_to do |format|
       format.html # new.html.erb
