@@ -1,0 +1,10 @@
+<h1>Send Email</h1>
+<%= form_tag :action => 'sendmail' do %>
+<p><label_tag="email_subject">Subject</label>:
+<%= text_field 'email', 'subject' %></p>
+<p><label_tag="email_recipient">Recipient</label>:
+<%= text_field 'email', 'recipient' %></p>
+<p><label_tag="email_message">Message</label><br/>
+<%= text_area 'email', 'message' %></p>
+<%= submit_tag "Send" %>
+<% end %>
