@@ -15,6 +15,7 @@
 			<nav>
 				<ul>
 					<% if session[:uid].present? %>
+						<li><%= link_to "View My Profile", landlord_url(current_landlord) %></li>
 						<li><%= link_to "View My Dashboard", listings_url %></li>
 						<li><%= link_to "Sign Out", sign_out_url %></li>
 					<% else %>
@@ -35,7 +36,8 @@
 			
 			<%= yield %>
 		</div>
-		
+		</br>
+		</br>
 		<footer>
 			&copy;2012 LeaseMate, LLC
 		</footer>
