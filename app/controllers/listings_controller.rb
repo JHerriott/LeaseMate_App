@@ -14,7 +14,6 @@ class ListingsController < ApplicationController
   	    LandlordMailer.invite_mailer(recipient, subject, message).deliver
         return if request.xhr?
         render :text => 'Message sent successfully'
-     
   end
   
   def index
