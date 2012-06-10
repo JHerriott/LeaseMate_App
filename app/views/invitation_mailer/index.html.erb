@@ -1,6 +1,5 @@
 <h1>Send Email</h1>
-<%= form_tag url_for(:action => 'invite') do %>
-<%#= form_tag ('/listings/1/mailer') do %>
+<%= form_tag :action => 'sendmail' do %>
 <p><label_tag="email_subject">Subject</label>:
 <%= text_field 'email', 'subject' %></p>
 <p><label_tag="email_recipient">Recipient</label>:

@@ -9,8 +9,7 @@ class LandlordMailer < ActionMailer::Base
     
   def invite_mailer(recipient, subject, message)
     @message = message
+   mail(:to => recipient, :subject => "You've been invited to LeaseMate")
+  end  
     
-    mail(:to => recipient, :subject => "You've been invited to LeaseMate")
-  end
-        
 end
