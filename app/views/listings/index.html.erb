@@ -17,7 +17,7 @@
     <td><%= listing.address %></td>
     <td><%= link_to 'Show Details', listing %></td>
     <td><%= link_to 'Applications', apps_url(:listing_id => listing.id) %></td>
-    <td><%= link_to 'Invite Applicant', listing %></td>
+    <td><%= link_to 'Invite Applicant', "listings/#{listing.id}/mailer" %></td>
     <td><%= link_to 'Edit', edit_listing_path(listing) %> | <%= link_to 'Delete', listing, confirm: 'Are you sure?', method: :delete %></td>
     <td></td>
     <td></td>
