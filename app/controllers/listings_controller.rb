@@ -2,6 +2,7 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   
+
   def mailer
   end
   
@@ -16,7 +17,6 @@ class ListingsController < ApplicationController
         
      
   end
-  
   
   def index
     @listings = Listing.find_all_by_landlord_id(session[:uid])
