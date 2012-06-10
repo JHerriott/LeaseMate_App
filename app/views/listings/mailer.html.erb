@@ -1,5 +1,5 @@
 <h2>Send Invitation to Apply</h2>
-<%= form_tag :action => 'sendmail' do %>
+<%= form_tag url_for(:action => 'invite') do %>
 <p><label_tag="email_subject">Subject</label>
 <%= text_field 'email', 'subject' %></p>
 <p><label_tag="email_recipient">Recipient</label>

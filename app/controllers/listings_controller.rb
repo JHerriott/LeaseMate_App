@@ -1,6 +1,17 @@
 class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
+  
+  def invite
+      email = params["email"]
+      recipient = email["recipient"]
+      subject = email["subject"]
+      message = email["message"]
+          LandlordMailer.invitate_mailer(recipient, subject, message).deliver
+          return if request.xhr?
+          render :text => 'Message sent successfully'
+  end
+  
   def index
     @listings = Listing.find_all_by_landlord_id(session[:uid])
 
@@ -82,14 +93,6 @@ class ListingsController < ApplicationController
     end
   end
   
-  def sendmail
-    email = @params["email"]
-    recipient = email["recipient"]
-    subject = email["subject"]
-    message = email["message"]
-        Landlord_Mailer.invitation_mailer(recipient subject, message).deliver
-        return if request.xhr?
-        render :text => 'Message sent successfully'
-    end
+
     
 end

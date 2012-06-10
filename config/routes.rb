@@ -11,6 +11,7 @@ LeaseMateApp::Application.routes.draw do
   resources :pages
   
   get "listings/:id/mailer" => "listing#mailer"
+  post "listings/:id/mailer" => "listing#invite"
 
   get "sessions/new", :as => :sign_in
   get "signout" => 'sessions#destroy', :as => :sign_out
