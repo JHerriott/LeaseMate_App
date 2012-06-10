@@ -6,40 +6,36 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-
-	<div id="container">
-		<header>
-			<h1><%= link_to "LeaseMate App", root_url %></h1>
-			<nav>
+<header>
+	<div class="wrap">
+	<%= link_to image_tag("Logo.jpg"), root_url %>
 				<ul>
 					<% if session[:uid].present? %>
 						<li><%= link_to "View My Dashboard", listings_url %></li>
 						<li><%= link_to "View My Profile", landlord_url(current_landlord) %></li>
 						<li><%= link_to "Sign Out", sign_out_url %></li>
 					<% else %>
-						<li><%= link_to "Sign Up!", new_landlord_url %></li>
-						<li><%= link_to "Sign In!", sign_in_url %></li>
+						<li><%= link_to "Sign Up", new_landlord_url %></li>
+						<li class="nav-link"><%= link_to "Sign In", sign_in_url %></li>
 					<% end %>
+					<% if session[:uid].present? %>
+						<li><h5><span>Hello, <%= current_landlord.fname %></span></h5></li>
 				</ul>
-			</nav>
-			<% if session[:uid].present? %>
-				<p>Hello, <%= current_landlord.fname %></p>
 			<% end %>
-		</header>
+			</div>
+</header>
 
 		<div id="content">
-			<% if flash[:notice].present? %>
+			<% if flash[:notice].present? %></br>
 				<p id="notice"><%= flash[:notice] %></p>
 			<% end %>
 			
 			<%= yield %>
 		</div>
-		</br>
-		</br>
 		<footer>
+			<div class="wrap">
 			&copy;2012 LeaseMate, LLC
+			</div>
 		</footer>
 	</div>
 </body>

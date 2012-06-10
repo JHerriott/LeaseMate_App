@@ -1,6 +1,6 @@
-<h1>Listing apps</h1>
+<div class="content"><h3>Listing apps</h3></br>
 
-<table>
+<table class="table table-bordered">
   <tr>
     <th>Name</th>
     <th>Dob</th>
@@ -9,9 +9,11 @@
     <th>Phone</th>
     <th>Pets</th>
     <th>Present Address</th>
-    <th></th>
-    <th></th>
-    <th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
   </tr>
 
 <% @apps.each do |app| %>
@@ -34,4 +36,4 @@
 
 <br />
 
-<%= link_to 'New App', new_app_path %>
+<%= link_to 'New App', new_app_path %></div>
