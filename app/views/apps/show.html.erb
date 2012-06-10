@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<div class="content"><p id="notice"><%= notice %></p></br>
 
 <p>
   <b>Fname:</b>
@@ -53,8 +53,8 @@
 <p>
   <b>Renter:</b>
   <%= @app.renter_id %>
-</p>
+</p></br>
 
 
 <%= link_to 'Edit', edit_app_path(@app) %> |
-<%= link_to 'Back', apps_path %>
+<%= link_to 'Back', apps_path %></div>
