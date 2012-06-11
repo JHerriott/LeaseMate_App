@@ -1,13 +1,12 @@
 LeaseMateApp::Application.routes.draw do
   
   root to: 'homepages#index'
-  
-  resources :apps
 
-  resources :listings
+  resources :listings do
+    resources :apps
+  end
 
   resources :landlords
-  
   resources :pages
   
 

@@ -1,7 +1,7 @@
-<div class="content"><h3>Sign In Here</h3>
+<div class="content"><h3>Sign In</h3>
 
 
-<%= form_tag sessions_create_url do %>
+<%= form_tag sessions_create_url do %></br>
 
   <p>
     <%= label_tag :email %>
@@ -12,5 +12,5 @@
     <%= password_field_tag :password %>
   </p>
 
-  <p><%= submit_tag 'Let Me In'%></p>
+  <p><%= submit_tag 'Sign In'%></p>
 <% end %></div>

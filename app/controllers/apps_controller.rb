@@ -2,7 +2,8 @@ class AppsController < ApplicationController
   # GET /apps
   # GET /apps.json
   def index
-    @apps = App.all
+    @listing = Listing.find(params[:listing_id])
+    @apps = @listing.apps
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,6 +14,7 @@ class AppsController < ApplicationController
   # GET /apps/1
   # GET /apps/1.json
   def show
+
     @app = App.find(params[:id])
 
     respond_to do |format|
