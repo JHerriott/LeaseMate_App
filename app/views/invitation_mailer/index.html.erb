@@ -1,4 +1,4 @@
-<h1>Send Email</h1>
+<div class="content"><h3>Send Email</h3>
 <%= form_tag :action => 'sendmail' do %>
 <p><label_tag="email_subject">Subject</label>:
 <%= text_field 'email', 'subject' %></p>
@@ -6,5 +6,5 @@
 <%= text_field 'email', 'recipient' %></p>
 <p><label_tag="email_message">Message</label><br/>
 <%= text_area 'email', 'message' %></p>
-<%= submit_tag "Send" %>
+<%= submit_tag "Send" %></div>
 <% end %>
